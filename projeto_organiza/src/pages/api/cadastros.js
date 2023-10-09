@@ -4,7 +4,7 @@ var cadastros = [
     senha: '1234',
     cpf: '00000000000',
     data: '20/02/2004',
-    saldo: 5000,
+    saldo: 7200,
     email: 'example@com',
     entradas: [{ valor: 5600, data: '20/10/2022' }],
     saidas: [{ categoria: 'farmácia', valor: 500, data: '21/10/2022' }, { categoria: 'shopping', valor: 100, data: '22/10/2022' }]

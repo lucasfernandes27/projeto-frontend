@@ -114,7 +114,7 @@ const Orcamento = () => {
                 </div>
                 <button
                   onClick={() => handleDeleteCategory(category.id)}
-                  className="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-700"
+                  className="bg-red-500 text-red py-2 px-4 rounded-md hover:bg-red-700"
                 >
                   Excluir
                 </button>
@@ -191,7 +191,7 @@ const Orcamento = () => {
         </div>
       </div>
       {showAlert && (
-        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-red-500 text-white py-2 px-4 rounded-lg shadow-md">
+        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-cards text-red py-2 px-4 rounded-lg shadow-md">
           Você excedeu o limite de orçamento em "{alerts.join(', ')}"!
         </div>
       )}

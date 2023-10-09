@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from 'chart.js';
-import { Doughnut } from 'react-chartjs-2';
+import { Pie } from 'react-chartjs-2';
 import { plugins } from "../../postcss.config";
 
 ChartJS.register(ArcElement, Tooltip, Legend, Title);
@@ -17,18 +17,18 @@ const HChart = () => {
             labels: ['Despesas', 'Metas', 'Saldo Atual', 'Receitas'],
             datasets: [
                 {
-                    data: [10, 10, 20, 60],
+                    data: [5, 10, 30, 55],
                     borderColor: [
-                        'rgba(43, 135, 227, 1)',
-                        'rgba(87, 208, 122, 1)',
+                        '#FF6384',
+                        '#eba10f',
                         'rgba(159, 67, 204, 1)',
-                        'rgba(235, 161, 15, 1)',
+                        '#4BC0C0',
                     ],
                     backgroundColor: [
-                        'rgba(43, 135, 227, 1)',
-                        'rgba(87, 208, 122, 1)',
+                        '#ff6565',
+                        '#eba10f',
                         'rgba(159, 67, 204, 1)',
-                        'rgba(235, 161, 15, 1)',
+                        '#4BC0C0',
                     ],
                     color: [
                         'rgba(255, 255, 255, 1)'
@@ -61,7 +61,7 @@ const HChart = () => {
     return (
         <>
             <div className=" flex flex-row w-full md:col-span-2 lg:h-[50vh] h-[60vh] a-auto p-4" >
-                <Doughnut data={chartData} options={chartOptions} plugins={[plugins]}
+                <Pie data={chartData} options={chartOptions} plugins={[plugins]}
                  />
             </div>
         </>

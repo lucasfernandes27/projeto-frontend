@@ -83,7 +83,7 @@ const BarChart = () => {
 
   return (
     <>
-      <div className='w-full h-full md:col-span-2 m-auto p-4 border rounded-lg bg-cards'>
+      <div className='w-full h-full md:col-span-2 m-auto p-4 border rounded-lg bg-cards flex justify-center items-center '>
         <Bar data={chartData} options={chartOptions} />
       </div>
     </>

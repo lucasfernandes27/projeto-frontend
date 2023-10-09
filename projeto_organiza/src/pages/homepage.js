@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react'
 import usuarioService from "./services/UsuarioService";
 import UsuarioService from "./services/UsuarioService";
 import { useRouter } from "next/router";
+import BarChart from "@/components/BarChart";
 
 export const getStaticProps = async () => {
   const res = await fetch('http://localhost:3000/api/cadastros')
@@ -41,8 +42,8 @@ export default function homepage(props) {
             <p className="text-3xl font-mukta">R${cadastro.saldo},00</p>
           </div>
           <div className="flex justify-center items-center "> 
-          <div className=" ">         
-            <HChart />
+          <div className="">         
+            <HChart/>
           </div>
           </div>
           <RecentOrders />
