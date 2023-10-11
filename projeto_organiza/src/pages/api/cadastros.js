@@ -10,8 +10,8 @@ var cadastros = [
     saidas: [{ categoria: 'farmácia', valor: 500, data: '21/10/2022' }, { categoria: 'shopping', valor: 100, data: '22/10/2022' }]
   },
   {
-    nome: 'Pedro Araujo',
-    senha: '5321',
+    nome: 'Heitor Souza',
+    senha: '12345',
     data: '24/10/2000',
     cpf: '00000000001',
     saldo: 400,

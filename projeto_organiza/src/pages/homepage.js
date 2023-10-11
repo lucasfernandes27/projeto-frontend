@@ -6,6 +6,9 @@ import usuarioService from "./services/UsuarioService";
 import UsuarioService from "./services/UsuarioService";
 import { useRouter } from "next/router";
 import BarChart from "@/components/BarChart";
+import Cards from "@/components/Cards";
+import Footer from "@/components/Footer";
+
 
 export const getStaticProps = async () => {
   const res = await fetch('http://localhost:3000/api/cadastros')
@@ -32,9 +35,9 @@ export default function homepage(props) {
 
 
   return (
-    <div className="bg-main ">
+    <div className="bg-main min-h-screen flex flex-col ">
       <Navbar />
-      <div className="flex flex-col p-4 gap-4  ">
+      <div className="flex flex-col p-4 gap-4">
         <div className="lg:col-span-2 col-span-1">
           <div className="flex flex-col w-full pb-4 font-mukta justify-center items-center">
             <p className="text-3xl font-mukta"> Olá, {cadastro.nome}.</p>
@@ -46,9 +49,12 @@ export default function homepage(props) {
             <HChart/>
           </div>
           </div>
-          <RecentOrders />
         </div>
+        
       </div>
+      <div className="mt-auto">
+            <Footer />
+          </div>
     </div>
   )
 }

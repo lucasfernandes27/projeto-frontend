@@ -29,7 +29,7 @@ const DenseAppBar = () => {
                         <Link href='/notificacao'>
                             <li className="ml-10 uppercase hover:border-b text-lg">Notificações</li>
                         </Link>
-                        <Link href='/settings'>
+                        <Link href='/investimentos'>
                             <li className="ml-10 uppercase hover:border-b text-lg">Investimento</li>
                         </Link>
                         <Link href='/orcamento'>
@@ -79,7 +79,7 @@ const DenseAppBar = () => {
                                 Notificações
                             </li>
                         </Link>
-                           <Link href='/configuracao'>
+                           <Link href='/investimentos'>
                             <li
                                 onClick={() => setMenuOpen(false)}
                                 className="py-4 cursor-pointer"

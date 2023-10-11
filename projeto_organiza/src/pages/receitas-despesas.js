@@ -53,11 +53,31 @@ function App() {
   return (
     <div className="bg-main min-h-screen flex flex-col">
         <Navbar/>
-    <div className="container mx-auto p-4">
-       
-      <h1 className="text-2xl font-bold mb-4">Registro de Receitas e Despesas</h1>
-       
-      <div className="mb-4">
+   
+
+      <div className='grid lg:grid-cols-5 gap-4 p-4'>
+        <div className='lg:col-span-2 col-span-1 flex justify-between w-full border p-4 rounded-lg'>
+            <div className='flex flex-col w-full pb-4'>
+                <p className='text-2xl font-bold'>R${totalReceitas.toFixed(2)}</p>
+                <p className='text-gray-600'>Entrada</p>
+            </div>
+        </div>
+        <div className='lg:col-span-2 col-span-1 flex justify-between w-full border p-4 rounded-lg'>
+            <div className='flex flex-col w-full pb-4'>
+                <p className='text-2xl font-bold'>R${totalDespesas.toFixed(2)}</p>
+                <p className='text-gray-600'>Saída</p>
+            </div>
+        </div>
+        <div className='flex justify-between w-full border p-4 rounded-lg'>
+            <div className='flex flex-col w-full pb-4'>
+                <p className='text-2xl font-bold'>R${totalBalance.toFixed(2)}</p>
+                <p className='text-gray-600'>Saldo total</p>
+            </div>
+        </div>
+    </div>
+    <h1 className="text-2xl font-bold mb-4 mx-auto">Registro de Receitas e Despesas</h1>
+ <div className="container p-4 flex items-center mx-auto"> 
+      <div className="mb-4 mx-auto">
       <input
           type="text"
           className="p-2 border rounded w-1/8 mr-2"
@@ -87,14 +107,8 @@ function App() {
           Adicionar
         </button>
       </div>
-
-      <div className="mb-10">
-        <h2 className="text-xl font-semibold">SALDO TOTAL: R$ {totalBalance.toFixed(2)}</h2>
-        <h3 className="text-lg font-semibold">ENTRADAS: R$ {totalReceitas.toFixed(2)}</h3>
-        <h3 className="text-lg font-semibold">SAÍDAS: R$ {totalDespesas.toFixed(2)}</h3>
-      </div>
-
-      <div>
+    </div>
+    <div className='mx-auto'>
         <h2 className="text-xl font-semibold mb-2">Histórico de Registros</h2>
         <ul>
           {entries.map((entry, index) => (
@@ -115,8 +129,6 @@ function App() {
             </li>
           ))}
         </ul>
-      </div>
-      
     </div>
     <div className="mt-auto">
             <Footer />
