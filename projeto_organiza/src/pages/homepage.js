@@ -1,12 +1,8 @@
 import Navbar from "@/components/Navbar";
 import HChart from "@/components/HChart";
-import RecentOrders from "@/components/RecentOrders";
 import React, { useState, useEffect } from 'react'
-import usuarioService from "./services/UsuarioService";
-import UsuarioService from "./services/UsuarioService";
+import UsuarioService from "../services/UsuarioService";
 import { useRouter } from "next/router";
-import BarChart from "@/components/BarChart";
-import Cards from "@/components/Cards";
 import Footer from "@/components/Footer";
 
 

@@ -1,4 +1,4 @@
-import UsuarioService from './services/UsuarioService'
+import UsuarioService from '../services/UsuarioService'
 import React, { useState } from 'react'
 import Router from "next/router"
 import Navbar from "@/components/Navbar";
